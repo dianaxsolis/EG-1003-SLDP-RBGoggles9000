@@ -3,7 +3,6 @@
 #Sachi Parikh, Redwan Ramim, Matthew Olmedo, and Diana Solis
 #Copyright 2021
 
-
 #Importing Kivy Widgets
 
 import kivy
@@ -39,7 +38,7 @@ Config.set('graphics','resizable', True)
 
 #Framework for Design Layout
 
-class StartingScreen (Screen):
+class StartingScreen(Screen):
     pass
 
 class RedGridLayoutCombos(Screen):
@@ -75,8 +74,5 @@ class RBGoggles9000App(App):
         return kv
 
 RBGoggles9000App().run()
- 
-    
 
-
-
+#End of Code

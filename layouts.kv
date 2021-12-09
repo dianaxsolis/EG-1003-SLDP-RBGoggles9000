@@ -9,25 +9,23 @@ WindowManager:
 
 #: import utils kivy.utils
 
-#LayoutForCombos
+#LayoutForScreens - Incorporates Design Elements
+
+#Approach for a Black and White App as audience is geared towards colorblind individuals
 
 <StartingScreen>:
     name:"first"
-    
-    GridLayout:
-        cols: 1	
-        rows: 1
 
-        Button:
-            text:'Welcome to RBGoggles9000!'
-            font_size: 32
-            on_release:
-                if app.content == '1': app.root.current = "firstred"
-                if app.content == '2': app.root.current = "firstgreen"
-                if app.content == '3': app.root.current = "firstblue"
-                root.manager.transition.direction = "left"
-                
-#Red Layout
+    Button:
+        text:'Welcome to RBGoggles9000!'
+        font_size: 32
+        background_color: 1, 0, 0, 0
+        on_release:
+            if app.content == '1': app.root.current = "firstred"
+            if app.content == '2': app.root.current = "firstgreen"
+            if app.content == '3': app.root.current = "firstblue"
+            root.manager.transition.direction = "left"
+#Red
 
 <RedGridLayoutCombos>:
     name: "firstred"
@@ -38,6 +36,13 @@ WindowManager:
 
         GridLayout:
             cols:2
+
+            Label:
+                text: "Color Detected"
+                font_size: 20
+
+            TextInput:
+                text: "Red"
 
             Label:
                 text: "Complementary Color"
@@ -63,6 +68,7 @@ WindowManager:
         Button:
             text: "Would you like to see possible fashion combinations with the color?"
             font_size: 20
+            background_color: 1, 0, 0, 0
             on_release:
                 app.root.current = "secondred"
                 root.manager.transition.direction = "left"
@@ -110,6 +116,15 @@ WindowManager:
             allow_stretch: True
             keep_ratio: False
 
+        Button:
+            text: 'Home'
+            background_color: 1, 0, 0, 0
+            on_release:
+                app.root.current = 'first'
+                root.manager.transition.direction ='left'
+
+#Green
+
 <GreenGridLayoutCombos>:
     name: "firstgreen"
 
@@ -119,6 +134,13 @@ WindowManager:
 
         GridLayout:
             cols:2
+
+            Label:
+                text: "Color Detected"
+                font_size: 20
+
+            TextInput:
+                text: "Green"
 
             Label:
                 text: "Complementary Color"
@@ -144,6 +166,7 @@ WindowManager:
         Button:
             text: "Would you like to see possible fashion combinations with the color?"
             font_size: 20
+            background_color: 1, 0, 0 ,0
             on_release:
                 app.root.current = "secondgreen"
                 root.manager.transition.direction = "left"
@@ -185,6 +208,15 @@ WindowManager:
             allow_stretch: True
             keep_ratio: False
 
+        Button:
+            text: 'Home'
+            background_color: 1,0,0,0
+            on_release:
+                app.root.current = 'first'
+                root.manager.transition.direction ='left'
+
+#Blue
+
 <BlueGridLayoutCombos>:
     name: "firstblue"
 
@@ -194,6 +226,13 @@ WindowManager:
 
         GridLayout:
             cols:2
+
+            Label:
+                text: "Color Detected"
+                font_size: 20
+
+            TextInput:
+                text: "Blue"
 
             Label:
                 text: "Complementary Color"
@@ -219,6 +258,7 @@ WindowManager:
         Button:
             text: "Would you like to see possible fashion combinations with the color?"
             font_size: 20
+            background_color: 1, 0 ,0 ,0
             on_release:
                 app.root.current = "secondblue"
                 root.manager.transition.direction = "left"
@@ -246,7 +286,7 @@ WindowManager:
             keep_ratio: False
 
         AsyncImage:
-            source: 'https://i.etsystatic.com/15998729/r/il/6f4b0b/3124047462/il_794xN.3124047462_mud7.jpg'
+            source: 'https://www.viviennewestwood.com/on/demandware.static/-/Sites-westwood-Library/default/dwdcd08c7d/gallery/Collections/Catwalk/AKVW_AW2021/01.JPG'
             allow_stretch: True
             keep_ratio: False
 
@@ -259,3 +299,14 @@ WindowManager:
             source: 'https://i.pinimg.com/564x/2e/75/c7/2e75c71350e01c8310ec8911f1f0596a.jpg'
             allow_stretch: True
             keep_ratio: False
+
+        Button:
+            text: 'Home'
+            background_color: 1, 0, 0 , 0
+            on_release:
+                app.root.current = 'first'
+                root.manager.transition.direction ='left'
+
+#End of Code
+#Courtesy of Diana Solis
+#2021
